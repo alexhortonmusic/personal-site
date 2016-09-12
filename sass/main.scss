@@ -1,16 +1,25 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
 #heroImg {
   width: 100%;
   height: 800px;
-  background: url('../../img/tape-mirror.jpeg');
+  background: url('../../img/tape-mirror-mirror.jpeg');
   /* linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)) */
   background-size: cover;
   background-position: center;
+
+  nav {
+    background-color: white;
+    border-bottom: 1px solid white;
+  }
 
   ul {
     display: flex;
@@ -27,14 +36,81 @@ body {
 
 }
 
-.heroTextBox {
-  width: 40%;
-  
-  .quote {
-    border-top: 3px solid #e74c3c;
-    border-bottom: 3px solid #e74c3c;
+.headline {
+  font-family: 'Patua One', cursive;
+  text-align: center;
+  font-size: 8em;
+  color: #e74c3c;
+
+  // margin-left: 100px;
+}
+
+.frontPageWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  // .column {
+  //   width: 650px;
+  // }
+
+  .leftCol {
+    width: 500px;
   }
-  h1 {
-    color: #e74c3c;
+
+  .rightCol {
+    width: 650px;
+  }
+}
+
+.headShotBox {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  img {
+    width: 250px;
+  	height: 250px;
+  	border-radius: 150px;
+  	-webkit-border-radius: 150px;
+  	-moz-border-radius: 150px;
+
+    margin: 0 auto;
+  }
+}
+
+.heroTextBox {
+
+  .quote {
+    font-family: 'Patua One', cursive;
+    border-top: 3px double #e74c3c;
+    border-bottom: 3px double #e74c3c;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      padding: 10px 0;
+      position: relative;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 2em;
+      color: #e74c3c;
+      font-style: italic;
+    }
+
+    h1:before {
+    	content: "\201C";
+    	font-size: 200%;
+    	display: block;
+    	position: absolute;
+    	top: -5px;
+    	left: -5px;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
   }
 }
