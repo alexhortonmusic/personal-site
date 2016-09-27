@@ -11,41 +11,13 @@
     <link rel="stylesheet" href="/css/output.css">
   </head>
   <body>
-    <div class="container fullContainer">
-      <nav>
-        <p>Alex Horton</p>
-        <ul class="navItems">
-          <li><p>Work</p></li>
-          <li><p>About</p></li>
-        </ul>
-      </nav>
-      <div id="heroImg">
-        <div class="frontPageWrap">
-          <div class="col span-1-of-2">
-            <!-- left column -->
-            <img src="../img/a-logo-alpha.png" class="headline" />
-          </div>
-          <div class="col span-1-of-2">
-            <div class="heroTextBox">
-              <!-- <div class="quote">
-                <h1>&nbsp; &nbsp; &nbsp;Look I made a hat, where there never was a hat.</h1>
-                <p>- Stephen Sondheim</p>
-              </div> -->
-              <h3 class="tagline">I'm Alex Horton, a developer. <br />Just over here making stuff.</h3>
-              <div class="headShotBox">
-                <img src="../img/alexHead.jpg" alt="Alex Horton Headshot" />
-              </div>
-              <p class="tagInfo">
-                Whether I'm building an application, refinishing my outdoor furniture, or writing a song, I'm all about taking something and trying to make it better.
-              </p>
-              <a href="mailto:alexhortondev@gmail.com?subject=Let's chat" class="talkAboutIt">Let's talk about it.</a>
-            </div>
-          </div>
-          <div class="down">
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-          </div>
-        </div>
+    <div ng-app='portfolio'>
+      <div class="container">
+        <div ng-include="'./partials/partialStack.html'"></div>
       </div>
     </div>
+    <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bower_components/angular/angular.min.js"></script>
+    <script src='/js/app.js'></script>
   </body>
 </html>
