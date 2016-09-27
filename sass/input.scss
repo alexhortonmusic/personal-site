@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.fullContainer {
+  width: 100%;
+}
+//
+#heroImg {
+  width: 100%;
+  height: 900px;
+  background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)), url('../../img/tape-mirror-mirror.jpeg');
+  // linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))
+  background-size: cover;
+  background-position: top;
+}
+
+.headline {
+  display: block;
+  height: 200px;
+  margin: 30px auto 0;
+}
+
+.frontPageWrap {
+
+    .tagline {
+      color: white;
+      font-weight: lighter;
+      text-align: center;
+      font-size: 2.3em;
+      margin-top: 80px;
+    }
+
+    .tagInfo {
+      width: 70%;
+      display: block;
+      margin: 20px auto 0;
+      color: white;
+      text-align: center;
+      font-weight: lighter;
+      font-size: 1.2em;
+      line-height: 2;
+
+    }
+
+    .talkAboutIt {
+      font-style: italic;
+      text-decoration: none;
+      color: white;
+      font-size: 1.7em;
+      font-weight: lighter;
+      display: block;
+      width: 230px;
+      margin: 10px auto;
+    }
+
+    .talkAboutIt:active,
+    .talkAboutIt:hover {
+      color: #e74c3c;
+      transition: 0.2s;
+    }
+  }
+
+.down {
+  font-size: 4em;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.headShotBox {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  img {
+    width: 250px;
+  	height: 250px;
+  	border-radius: 150px;
+  	-webkit-border-radius: 150px;
+  	-moz-border-radius: 150px;
+
+    margin: 0 auto;
+  }
+}
+//
+// .heroTextBox {
+//
+//   .quote {
+//     font-family: 'Patua One', cursive;
+//     border-top: 3px double #e74c3c;
+//     border-bottom: 3px double #e74c3c;
+//     width: 90%;
+//     margin: 0 auto;
+//     text-align: center;
+//
+//     h1 {
+//       padding: 10px 0;
+//       position: relative;
+//       width: 80%;
+//       text-align: center;
+//       margin: 0 auto;
+//       font-size: 2em;
+//       color: #e74c3c;
+//       font-style: italic;
+//     }
+//
+//     h1:before {
+//     	content: "\201C";
+//     	font-size: 200%;
+//     	display: block;
+//     	position: absolute;
+//     	top: -5px;
+//     	left: -5px;
+//     }
+//
+//     p {
+//       margin-bottom: 5px;
+//     }
+//   }
+// }

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Alex Horton | Developer</title>
-  <link rel="stylesheet" href="dist/css/main.css">
-</head>
-<body>
-  <div id="heroImg">
-    <nav>
-      <ul class="navItems">
-        <li>Work</li>
-        <li>About</li>
-      </ul>
-    </nav>
-    <div class="heroTextBox">
-      <div class="quote">
-        <h1>"Look I made a hat, where there never was a hat." - Stephen Sondheim</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alex Horton | Developer</title>
+    <script src="https://use.fontawesome.com/022879ddbb.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gravitas+One|Patua+One|Raleway:300,400,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/output.css">
+  </head>
+  <body>
+    <div ng-app='portfolio'>
+      <div class="container">
+        <div ng-include="'./partials/partialStack.html'"></div>
       </div>
-      <h3>Hello! I'm Alex Horton, a developer with an interest in design. Just over here making stuff.</h3>
     </div>
-  </div>
-</body>
+    <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bower_components/angular/angular.min.js"></script>
+    <script src='/js/app.js'></script>
+  </body>
 </html>
