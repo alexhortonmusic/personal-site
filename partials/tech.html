@@ -1,15 +1,76 @@
 <div class='section group tech'>
   <h1>Tech Stack</h1>
-  <div class='col span-1-of-5'>
-    <img ng-src='{{img.url}}' ng-repeat='img in arr1' />
-  </div>
-  <div class='col span-1-of-5'>
-    <img ng-src='{{img.url}}' ng-repeat='img in arr2' />
-  </div>
-  <div class='col span-1-of-5'>
-    <img ng-src='{{img.url}}' ng-repeat='img in arr3' />
-  </div>
-  <div class='col span-1-of-5'>
-    <img ng-src='{{img.url}}' ng-repeat='img in arr4' />
+  <div class='techBox'>
+    <div class='row'>
+      <img ng-src='{{img.imgUrl}}' class='techImg' ng-repeat='img in [{
+        "imgUrl": "/img/tech/angular.png"
+      },
+      {
+        "imgUrl": "/img/tech/bower.png"
+      },
+      {
+        "imgUrl": "/img/tech/bootstrap.png"
+      },
+      {
+        "imgUrl": "/img/tech/browserify.png"
+      },
+      {
+        "imgUrl": "/img/tech/css3.png"
+      },
+      {
+        "imgUrl": "/img/tech/express.png"
+      },
+      {
+        "imgUrl": "/img/tech/firebase.png"
+      }]' />
+    </div>
+    <div class='row'>
+      <img ng-src='{{img.imgUrl}}' class='techImg' ng-repeat='img in [
+      {
+        "imgUrl": "/img/tech/git.png"
+      },
+      {
+        "imgUrl": "/img/tech/github.png"
+      },
+      {
+        "imgUrl": "/img/tech/gulp.png"
+      },
+      {
+        "imgUrl": "/img/tech/html5.png"
+      },
+      {
+        "imgUrl": "/img/tech/jasmine.png"
+      },
+      {
+        "imgUrl": "/img/tech/jq2.png"
+      },
+      {
+        "imgUrl": "/img/tech/jslogo.png"
+      }]' />
+    </div>
+    <div class='row'>
+      <img ng-src='{{img.imgUrl}}' class='techImg' ng-repeat='img in [
+      {
+        "imgUrl": "/img/tech/materialize.png"
+      },
+      {
+        "imgUrl": "/img/tech/mocha.png"
+      },
+      {
+        "imgUrl": "/img/tech/mongo.png"
+      },
+      {
+        "imgUrl": "/img/tech/nodejs.png"
+      },
+      {
+        "imgUrl": "/img/tech/npm.png"
+      },
+      {
+        "imgUrl": "/img/tech/pugface.png"
+      },
+      {
+        "imgUrl": "/img/tech/sass.png"
+      }]' />
+    </div>
   </div>
 </div>
