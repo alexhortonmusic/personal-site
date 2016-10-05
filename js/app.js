@@ -3,6 +3,7 @@
 const techImgArr = [
   "/img/tech/angular.png",
   "/img/tech/bower.png",
+  "/img/tech/bootstrap.png",
   "/img/tech/browserify.png",
   "/img/tech/css3.png",
   "/img/tech/express.png",
@@ -14,6 +15,7 @@ const techImgArr = [
   "/img/tech/jasmine.png",
   "/img/tech/jq2.png",
   "/img/tech/jslogo.png",
+  "/img/tech/materialize.png",
   "/img/tech/mocha.png",
   "/img/tech/mongo.png",
   "/img/tech/nodejs.png",
@@ -22,10 +24,19 @@ const techImgArr = [
   "/img/tech/sass.png"
 ]
 
-const buildPrint = (element) => {
-  let techImg = `<img src='${element}' class='techImg' />`
-  console.log(techImg)
-  $('.techImgBox').append(techImg)
+const buildPrint = (element, index) => {
+  let techImg = `
+    <div class='techImgBox'>
+      <img src='${element}' class='techImg' />
+    </div>
+  `
+  if (index <= 6) {
+    $('.row1').append(techImg)
+  } else if (index <= 13) {
+    $('.row2').append(techImg)
+  } else {
+    $('.row3').append(techImg)
+  }
 }
 
 const printStack = () => {
