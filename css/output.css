@@ -79,9 +79,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
-  .tech .techBox .techImg {
-    max-height: 80px;
-    width: 80px;
-    margin: 0 auto 15px; }
+    .tech .techBox .row .techImgBox {
+      width: 120px;
+      margin-bottom: 60px; }
+      .tech .techBox .row .techImgBox .techImg {
+        display: block;
+        max-height: 80px;
+        max-width: 120px;
+        margin: 0 auto; }
 
 /*# sourceMappingURL=output.css.map */

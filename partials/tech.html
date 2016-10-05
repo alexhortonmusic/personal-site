@@ -2,7 +2,7 @@
   <h1>Tech Stack</h1>
   <div class='techBox'>
     <div class='row'>
-      <img ng-src='{{img.imgUrl}}' class='techImg' ng-repeat='img in [{
+      <div class='techImgBox' ng-repeat='img in [{
         "imgUrl": "/img/tech/angular.png"
       },
       {
@@ -22,10 +22,12 @@
       },
       {
         "imgUrl": "/img/tech/firebase.png"
-      }]' />
+      }]'>
+        <img ng-src='{{img.imgUrl}}' class='techImg'  />
+      </div>
     </div>
     <div class='row'>
-      <img ng-src='{{img.imgUrl}}' class='techImg' ng-repeat='img in [
+      <div class='techImgBox' ng-repeat='img in [
       {
         "imgUrl": "/img/tech/git.png"
       },
@@ -46,10 +48,12 @@
       },
       {
         "imgUrl": "/img/tech/jslogo.png"
-      }]' />
+      }]'>
+        <img ng-src='{{img.imgUrl}}' class='techImg'/>
+      </div>
     </div>
     <div class='row'>
-      <img ng-src='{{img.imgUrl}}' class='techImg' ng-repeat='img in [
+      <div class='techImgBox' ng-repeat='img in [
       {
         "imgUrl": "/img/tech/materialize.png"
       },
@@ -70,7 +74,9 @@
       },
       {
         "imgUrl": "/img/tech/sass.png"
-      }]' />
+      }]'>
+        <img ng-src='{{img.imgUrl}}' class='techImg'/>
+      </div>
     </div>
   </div>
 </div>

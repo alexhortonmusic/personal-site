@@ -109,14 +109,20 @@ body {
       flex-direction: row;
       justify-content: space-around;
       // width: 85%;
+
+      .techImgBox {
+        width: 120px;
+        margin-bottom: 60px;
+
+        .techImg {
+          display: block;
+          max-height: 80px;
+          max-width: 120px;
+          margin: 0 auto;
+        }
+      }
     }
 
-    .techImg {
-      // display: block;
-      max-height: 80px;
-      width: 80px;
-      margin: 0 auto 15px;
-    }
   }
 }
 
