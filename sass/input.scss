@@ -1,3 +1,9 @@
+$primary-color: #4d6c19;
+$secondary: #FCFC62;
+$neutral-1: #FEFFEA;
+$neutral-2: #C9C9C9;
+$neutral-3: #A3A3A3;
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +21,8 @@ body {
 #heroImg {
   width: 100%;
   height: 820px;
-  background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)), url('../../img/tape-mirror-mirror.jpeg');
-  // linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))
+  background: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), url('../../img/tape-mirror-mirror.jpeg');
+
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -31,7 +37,7 @@ body {
 .frontPageWrap {
 
     .tagline {
-      color: white;
+      color: $neutral-1;
       font-weight: lighter;
       text-align: center;
       font-size: 2.3em;
@@ -42,7 +48,7 @@ body {
       width: 70%;
       display: block;
       margin: 20px auto 0;
-      color: white;
+      color: $neutral-1;
       text-align: center;
       font-weight: lighter;
       font-size: 1.2em;
@@ -53,7 +59,7 @@ body {
     .talkAboutIt {
       font-style: italic;
       text-decoration: none;
-      color: white;
+      color: $neutral-1;
       font-size: 1.7em;
       font-weight: lighter;
       display: block;
@@ -63,14 +69,14 @@ body {
 
     .talkAboutIt:active,
     .talkAboutIt:hover {
-      color: #f29f97;
+      color: $primary-color;
       transition: 0.2s;
     }
   }
 
 .down {
   font-size: 5em;
-  color: white;
+  color: $neutral-1;
   text-align: center;
   margin-top: 20px;
 }
@@ -91,73 +97,80 @@ body {
   }
 }
 
-.tech { /* come back to this style */
-  h1 {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
-  }
+.thirdSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
-  .techBox {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-around;
-    // height: 500px;
+  .tech { /* come back to this style */
+    border: 1px solid black;
 
-    .row {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      // width: 85%;
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
 
-      .techImgBox {
-        width: 120px;
-        margin-bottom: 60px;
+    .techBox {
 
-        .techImg {
-          display: block;
-          max-height: 80px;
-          max-width: 120px;
-          margin: 0 auto;
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        // width: 85%;
+
+        .techImgBox {
+          width: 100px;
+          margin-bottom: 50px;
+
+          .techImg {
+            display: block;
+            max-height: 60px;
+            max-width: 90px;
+            margin: 0 auto;
+          }
         }
       }
     }
   }
-}
 
-//
-// .heroTextBox {
-//
-//   .quote {
-//     font-family: 'Patua One', cursive;
-//     border-top: 3px double #e74c3c;
-//     border-bottom: 3px double #e74c3c;
-//     width: 90%;
-//     margin: 0 auto;
-//     text-align: center;
-//
-//     h1 {
-//       padding: 10px 0;
-//       position: relative;
-//       width: 80%;
-//       text-align: center;
-//       margin: 0 auto;
-//       font-size: 2em;
-//       color: #e74c3c;
-//       font-style: italic;
-//     }
-//
-//     h1:before {
-//     	content: "\201C";
-//     	font-size: 200%;
-//     	display: block;
-//     	position: absolute;
-//     	top: -5px;
-//     	left: -5px;
-//     }
-//
-//     p {
-//       margin-bottom: 5px;
-//     }
-//   }
-// }
+
+  .sondheim {
+    border: 1px solid black;
+    background-color: $primary-color;
+
+    .quote {
+      font-family: 'Patua One', cursive;
+      border-top: 3px double $neutral-1;
+      border-bottom: 3px double $neutral-1;
+      width: 90%;
+      margin: 140px auto 0;
+      text-align: center;
+
+      h1 {
+        padding: 10px 0;
+        position: relative;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 2.2em;
+        color: #FEFFEA;
+        font-style: italic;
+        font-weight: lighter;
+      }
+
+      h1:before {
+        content: "\201C";
+        font-size: 200%;
+        display: block;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
