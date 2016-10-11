@@ -97,13 +97,39 @@ body {
   }
 }
 
-.thirdSection {
+.about {
+  .aboutBox {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .aboutCol {
+      width: 30%;
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      p {
+        text-align: center;
+        line-height: 20px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.lastSection {
   display: flex;
-  flex-direction: row;
+  flex-direction:row-reverse;
   justify-content: space-around;
+  // border-top: 2px solid $neutral-1;
 
   .tech { /* come back to this style */
-    border: 1px solid black;
+    width: 75%;
 
     h1 {
       text-align: center;
@@ -136,7 +162,6 @@ body {
 
 
   .sondheim {
-    border: 1px solid black;
     background-color: $primary-color;
 
     .quote {
@@ -154,7 +179,7 @@ body {
         text-align: center;
         margin: 0 auto;
         font-size: 2.2em;
-        color: #FEFFEA;
+        color: $neutral-1;
         font-style: italic;
         font-weight: lighter;
       }
@@ -169,7 +194,10 @@ body {
       }
 
       p {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
+        color: $neutral-1;
+        font-family: 'Raleway', serif;
+        font-weight: lighter;
       }
     }
   }
