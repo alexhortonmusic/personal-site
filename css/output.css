@@ -20,7 +20,7 @@ body {
 .headline {
   display: block;
   height: 200px;
-  margin: 30px auto 0; }
+  margin: 0 auto; }
 
 .frontPageWrap .tagline {
   color: #FEFFEA;
@@ -71,7 +71,7 @@ body {
 
 .about .aboutBox {
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
@@ -94,7 +94,7 @@ body {
     width: 75%; }
     .lastSection .tech h1 {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 40px;
       margin-bottom: 25px; }
     .lastSection .tech .techBox .row {
       display: flex;
@@ -139,5 +139,9 @@ body {
         color: #FEFFEA;
         font-family: 'Raleway', serif;
         font-weight: lighter; }
+
+.projects {
+  border: 1px solid #4d6c19;
+  height: 500px; }
 
 /*# sourceMappingURL=output.css.map */
