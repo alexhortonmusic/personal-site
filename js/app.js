@@ -44,3 +44,11 @@ const printStack = () => {
 }
 
 printStack()
+
+let labelID;
+
+$('.thing').click(function() {
+  console.log(this)
+  labelID = $(this).attr('for')
+  $('#' + labelID).toggleClass('active')
+})
