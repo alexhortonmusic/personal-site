@@ -45,7 +45,7 @@ const printStack = () => {
 
 printStack()
 
-//  modal logic ------------- 
+//  modal logic -------------
 const projectsArr = []
 
 const Tradesies = {
@@ -71,22 +71,21 @@ const Freddit = {
 
 projectsArr.push(Tradesies, SpaceRace, Freddit)
 
-
 const projectHTMLarr = []
 
 projectsArr.forEach((project, index) => {
   const modalHTML = `
-    <div class="modal-container">
+    <div class="modal-container project">
       <h3>${project.name}</h3>
-      <img for="modal-toggle" src="${project.mainImg}" alt="${project.name} Page" class='thing' style="width: 400px;">
-      <label class="modal-backdrop" for="modal-toggle"></label>
+      <img src="${project.mainImg}" alt="${project.name} Page" class='modal-mainImg'>
+      <label class="modal-backdrop"></label>
       <div class="modal-content">
-        <label class="modal-close" for="modal-toggle">&#x2715;</label>
+        <label class="modal-close">&#x2715;</label>
         <h2>${project.name}</h2><hr />
         <p>${project.info}</p>
         <img src='${project.mainImg}' class='modalPic'/>
         <img src='${project.img2}' class='modalPic'/>
-        <label class="modal-content-btn thing" for="modal-toggle">OK</label>
+        <label class="modal-content-btn thing">OK</label>
       </div>
     </div>
   `
@@ -98,9 +97,8 @@ projectHTMLarr.forEach((projectHTML) => {
 })
 
 let clickedProject;
-
-$('.thing').click(function() {
+$('.project').click(function() {
   console.log(this)
   clickedProject = $(this).attr('for')
-  $('#' + labelID).toggleClass('active')
+  $('#' + clickedProject).toggleClass('active')
 })

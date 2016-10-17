@@ -134,14 +134,20 @@ body {
   .modalBox {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 
     // modal
     .modal-container {
-      // margin: 60px auto;
+      margin: 40px;
       position: relative;
       display: flex;
-      flex-direction: column;
+      flex-flow: column wrap;
+      width: 40%;
+
+      .modal-mainImg {
+        width: 100%;
+      }
+
       .modal-btn {
         display: block;
         margin: 0 auto;
@@ -175,7 +181,7 @@ body {
       }
 
       .modalPic {
-        width: 400px;
+        width: 300px;
         height: auto;
         display: block;
       }
@@ -213,7 +219,7 @@ body {
       }
       #modal-toggle1, #modal-toggle, #modal-toggle2 {
         display: none;
-        // &.active ~ .modal-backdrop,
+        &.active ~ .modal-backdrop,
         &:checked ~ .modal-backdrop {
           background-color: rgba(0, 0, 0, 0.6);
           width: 100vw;
@@ -226,7 +232,7 @@ body {
           opacity: 1;
           transition: opacity 0.2s ease-in;
         }
-        // &.active ~ .modal-content,
+        &.active ~ .modal-content,
         &:checked ~ .modal-content {
           opacity: 1;
           background-color: #fff;
