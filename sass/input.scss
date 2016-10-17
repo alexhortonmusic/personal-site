@@ -213,7 +213,7 @@ body {
       }
       #modal-toggle1, #modal-toggle, #modal-toggle2 {
         display: none;
-        &.active ~ .modal-backdrop,
+        // &.active ~ .modal-backdrop,
         &:checked ~ .modal-backdrop {
           background-color: rgba(0, 0, 0, 0.6);
           width: 100vw;
@@ -226,7 +226,7 @@ body {
           opacity: 1;
           transition: opacity 0.2s ease-in;
         }
-        &.active ~ .modal-content,
+        // &.active ~ .modal-content,
         &:checked ~ .modal-content {
           opacity: 1;
           background-color: #fff;

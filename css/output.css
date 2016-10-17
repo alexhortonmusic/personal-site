@@ -165,7 +165,7 @@ body {
           background: #365690; }
       .projects .modalBox .modal-container #modal-toggle1, .projects .modalBox .modal-container #modal-toggle, .projects .modalBox .modal-container #modal-toggle2 {
         display: none; }
-        .projects .modalBox .modal-container #modal-toggle1.active ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle.active ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle2.active ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-backdrop {
+        .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-backdrop {
           background-color: rgba(0, 0, 0, 0.6);
           width: 100vw;
           height: 100vh;
@@ -176,7 +176,7 @@ body {
           visibility: visible;
           opacity: 1;
           transition: opacity 0.2s ease-in; }
-        .projects .modalBox .modal-container #modal-toggle1.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-content {
+        .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-content {
           opacity: 1;
           background-color: #fff;
           width: 800px;
@@ -192,7 +192,7 @@ body {
           visibility: visible;
           box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6); }
           @media (max-width: 400px) {
-            .projects .modalBox .modal-container #modal-toggle1.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-content {
+            .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-content {
               left: 0; } }
 
 .lastSection {

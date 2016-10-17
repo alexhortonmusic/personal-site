@@ -45,10 +45,62 @@ const printStack = () => {
 
 printStack()
 
-let labelID;
+//  modal logic ------------- 
+const projectsArr = []
+
+const Tradesies = {
+  name: 'Tradesies',
+  mainImg: '../img/tradesies-home.png',
+  info: 'A gear-trading application for the restless musician.',
+  img2: '../img/tradesies-community.png'
+}
+
+const SpaceRace = {
+  name: 'Space Race',
+  mainImg: '../img/space-home.png',
+  info: 'Space Race is a live-action multiplayer game, supporting multiple users and rooms. Build using technologies such as Node.js, Express, Socket.io, and Pug, Space Race is a game where 2-4 players race their ships to the moon.',
+  img2: '../img/space-game.png'
+}
+
+const Freddit = {
+  name: 'Freddit',
+  mainImg: '../img/freddit-home.png',
+  info: 'Freddit is a social news aggregator and rating site. In other words, a clone of the basic features of Reddit.',
+  img2: '../img/freddit-comment.png'
+}
+
+projectsArr.push(Tradesies, SpaceRace, Freddit)
+
+
+const projectHTMLarr = []
+
+projectsArr.forEach((project, index) => {
+  const modalHTML = `
+    <div class="modal-container">
+      <h3>${project.name}</h3>
+      <img for="modal-toggle" src="${project.mainImg}" alt="${project.name} Page" class='thing' style="width: 400px;">
+      <label class="modal-backdrop" for="modal-toggle"></label>
+      <div class="modal-content">
+        <label class="modal-close" for="modal-toggle">&#x2715;</label>
+        <h2>${project.name}</h2><hr />
+        <p>${project.info}</p>
+        <img src='${project.mainImg}' class='modalPic'/>
+        <img src='${project.img2}' class='modalPic'/>
+        <label class="modal-content-btn thing" for="modal-toggle">OK</label>
+      </div>
+    </div>
+  `
+  projectHTMLarr.push(modalHTML)
+})
+
+projectHTMLarr.forEach((projectHTML) => {
+  $('.modalBox').append(projectHTML)
+})
+
+let clickedProject;
 
 $('.thing').click(function() {
   console.log(this)
-  labelID = $(this).attr('for')
+  clickedProject = $(this).attr('for')
   $('#' + labelID).toggleClass('active')
 })
