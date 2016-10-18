@@ -129,36 +129,24 @@ body {
 
 .projects {
   border: 1px solid $primary;
-  height: 500px;
+  min-height: 500px;
 
   .modalBox {
     display: flex;
     flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-around;
 
     // modal
     .modal-container {
-      // margin: 60px auto;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      .modal-btn {
-        display: block;
-        margin: 0 auto;
-        color: #fff;
-        width: 160px;
-        height: 50px;
-        line-height: 50px;
-        background: #446CB3;
-        font-size: 22px;
-        border: 0;
-        border-radius: 3px;
-        cursor: pointer;
-        text-align: center;
-        box-shadow: 0 5px 5px -5px #333;
-        transition: background 0.3s ease-in;
-        &:hover { background: #365690; }
+      margin: 30px;
+      border: 2px solid red;
+      width: 500px;
+
+      .modal-mainImg {
+        width: 100%;
       }
+
       .modal-content,
       .modal-backdrop {
         height: 0;
@@ -170,12 +158,12 @@ body {
         transition: opacity 0.2s ease-in;
       }
 
-      .modal-content {
+      .modal-size {
         width: 400px;
       }
 
       .modalPic {
-        width: 400px;
+        width: 300px;
         height: auto;
         display: block;
       }
@@ -211,41 +199,79 @@ body {
         font-weight: normal;
         &:hover { color: #fff; background: #365690; }
       }
-      #modal-toggle1, #modal-toggle, #modal-toggle2 {
-        display: none;
-        &.active ~ .modal-backdrop,
-        &:checked ~ .modal-backdrop {
-          background-color: rgba(0, 0, 0, 0.6);
-          width: 100vw;
-          height: 100vh;
-          position: fixed;
-          left: 0;
-          top: 0;
-          z-index: 9;
-          visibility: visible;
-          opacity: 1;
-          transition: opacity 0.2s ease-in;
-        }
-        &.active ~ .modal-content,
-        &:checked ~ .modal-content {
-          opacity: 1;
-          background-color: #fff;
-          // max-width: 400px;
-          width: 800px;
-          height: 500px;
-          padding: 10px 30px;
-          position: fixed;
-          left: calc(50% - 400px);
-          top: 12%;
-          border-radius: 4px;
-          z-index: 999;
-          pointer-events: auto;
-          cursor: auto;
-          visibility: visible;
-          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
-          @media (max-width: 400px) { left: 0; }
-        }
+
+      .backdrop-Tradesies,
+      .backdrop-Space,
+      .backdrop-Freddit {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
       }
+
+      .open-Tradesies,
+      .open-Space,
+      .open-Freddit {
+        opacity: 1;
+        background-color: #fff;
+        // max-width: 400px;
+        width: 800px;
+        height: 500px;
+        padding: 10px 30px;
+        position: fixed;
+        left: calc(50% - 400px);
+        top: 12%;
+        border-radius: 4px;
+        z-index: 999;
+        pointer-events: auto;
+        cursor: auto;
+        visibility: visible;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+        @media (max-width: 400px) { left: 0; }
+      }
+
+
+      // #modal-toggle1, #modal-toggle, #modal-toggle2 {
+      //   display: none;
+      //   &.active ~ .modal-backdrop,
+      //   &:checked ~ .modal-backdrop {
+      //     background-color: rgba(0, 0, 0, 0.6);
+      //     width: 100vw;
+      //     height: 100vh;
+      //     position: fixed;
+      //     left: 0;
+      //     top: 0;
+      //     z-index: 9;
+      //     visibility: visible;
+      //     opacity: 1;
+      //     transition: opacity 0.2s ease-in;
+      //   }
+      //   &.active ~ .modal-content,
+      //   &:checked ~ .modal-content {
+      //     opacity: 1;
+      //     background-color: #fff;
+      //     // max-width: 400px;
+      //     width: 800px;
+      //     height: 500px;
+      //     padding: 10px 30px;
+      //     position: fixed;
+      //     left: calc(50% - 400px);
+      //     top: 12%;
+      //     border-radius: 4px;
+      //     z-index: 999;
+      //     pointer-events: auto;
+      //     cursor: auto;
+      //     visibility: visible;
+      //     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+      //     @media (max-width: 400px) { left: 0; }
+      //   }
+      // }
     }
   }
 }

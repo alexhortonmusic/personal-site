@@ -45,10 +45,71 @@ const printStack = () => {
 
 printStack()
 
-let labelID;
+//  modal logic -------------
+const projectsArr = []
 
-$('.thing').click(function() {
-  console.log(this)
-  labelID = $(this).attr('for')
-  $('#' + labelID).toggleClass('active')
+const Tradesies = {
+  name: 'Tradesies',
+  className: 'tradesies',
+  mainImg: '../img/tradesies-home.png',
+  info: 'A gear-trading application for the restless musician.',
+  img2: '../img/tradesies-community.png'
+}
+
+const SpaceRace = {
+  name: 'Space Race',
+  className: 'spaceRace',
+  mainImg: '../img/space-home.png',
+  info: 'Space Race is a live-action multiplayer game, supporting multiple users and rooms. Build using technologies such as Node.js, Express, Socket.io, and Pug, Space Race is a game where 2-4 players race their ships to the moon.',
+  img2: '../img/space-game.png'
+}
+
+const Freddit = {
+  name: 'Freddit',
+  className: 'freddit',
+  mainImg: '../img/freddit-home.png',
+  info: 'Freddit is a social news aggregator and rating site. In other words, a clone of the basic features of Reddit.',
+  img2: '../img/freddit-comment.png'
+}
+
+projectsArr.push(Tradesies, SpaceRace, Freddit)
+
+const projectHTMLarr = []
+
+projectsArr.forEach((project, index) => {
+  const modalHTML = `
+    <div class="modal-container project">
+      <h3>${project.name}</h3>
+      <img src="${project.mainImg}" alt="${project.name} Page" class='modal-mainImg'>
+      <label class="modal-backdrop" id="backdrop-${project.className}"></label>
+      <div class="modal-content modal-size" id="open-${project.className}">
+        <label class="modal-close">&#x2715;</label>
+        <h2>${project.name}</h2><hr />
+        <p>${project.info}</p>
+        <img src='${project.mainImg}' class='modalPic'/>
+        <img src='${project.img2}' class='modalPic'/>
+        <label class="modal-content-btn thing">OK</label>
+      </div>
+    </div>
+  `
+  projectHTMLarr.push(modalHTML)
+})
+
+projectHTMLarr.forEach((projectHTML) => {
+  $('.modalBox').append(projectHTML)
+})
+
+let projectToOpen,
+    open,
+    back,
+    backdrop,
+    content
+$('.project').click(function() {
+  back = $(this)[0].childNodes[5].id
+  open = $(this)[0].childNodes[7].id
+
+  backdrop = $(`#${back}`)
+  content = $(`#${open}`)
+  backdrop.removeClass('modal-backdrop').addClass(back)
+  content.removeClass('modal-content').addClass(open)
 })
