@@ -90,36 +90,18 @@ body {
 
 .projects {
   border: 1px solid #4d6c19;
-  height: 500px; }
+  min-height: 500px; }
   .projects .modalBox {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
+    flex-flow: row wrap;
+    justify-content: space-around; }
     .projects .modalBox .modal-container {
-      margin: 40px;
-      position: relative;
-      display: flex;
-      flex-flow: column wrap;
-      width: 40%; }
+      margin: 30px;
+      border: 2px solid red;
+      width: 500px; }
       .projects .modalBox .modal-container .modal-mainImg {
         width: 100%; }
-      .projects .modalBox .modal-container .modal-btn {
-        display: block;
-        margin: 0 auto;
-        color: #fff;
-        width: 160px;
-        height: 50px;
-        line-height: 50px;
-        background: #446CB3;
-        font-size: 22px;
-        border: 0;
-        border-radius: 3px;
-        cursor: pointer;
-        text-align: center;
-        box-shadow: 0 5px 5px -5px #333;
-        transition: background 0.3s ease-in; }
-        .projects .modalBox .modal-container .modal-btn:hover {
-          background: #365690; }
       .projects .modalBox .modal-container .modal-content,
       .projects .modalBox .modal-container .modal-backdrop {
         height: 0;
@@ -129,7 +111,7 @@ body {
         overflow: hidden;
         cursor: pointer;
         transition: opacity 0.2s ease-in; }
-      .projects .modalBox .modal-container .modal-content {
+      .projects .modalBox .modal-container .modal-size {
         width: 400px; }
       .projects .modalBox .modal-container .modalPic {
         width: 300px;
@@ -167,37 +149,41 @@ body {
         .projects .modalBox .modal-container .modal-content-btn:hover {
           color: #fff;
           background: #365690; }
-      .projects .modalBox .modal-container #modal-toggle1, .projects .modalBox .modal-container #modal-toggle, .projects .modalBox .modal-container #modal-toggle2 {
-        display: none; }
-        .projects .modalBox .modal-container #modal-toggle1.active ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle.active ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle2.active ~ .modal-backdrop, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-backdrop {
-          background-color: rgba(0, 0, 0, 0.6);
-          width: 100vw;
-          height: 100vh;
-          position: fixed;
-          left: 0;
-          top: 0;
-          z-index: 9;
-          visibility: visible;
-          opacity: 1;
-          transition: opacity 0.2s ease-in; }
-        .projects .modalBox .modal-container #modal-toggle1.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-content {
-          opacity: 1;
-          background-color: #fff;
-          width: 800px;
-          height: 500px;
-          padding: 10px 30px;
-          position: fixed;
-          left: calc(50% - 400px);
-          top: 12%;
-          border-radius: 4px;
-          z-index: 999;
-          pointer-events: auto;
-          cursor: auto;
-          visibility: visible;
-          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6); }
-          @media (max-width: 400px) {
-            .projects .modalBox .modal-container #modal-toggle1.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle1:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle:checked ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2.active ~ .modal-content, .projects .modalBox .modal-container #modal-toggle2:checked ~ .modal-content {
-              left: 0; } }
+      .projects .modalBox .modal-container .backdrop-Tradesies,
+      .projects .modalBox .modal-container .backdrop-Space,
+      .projects .modalBox .modal-container .backdrop-Freddit {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.2s ease-in; }
+      .projects .modalBox .modal-container .open-Tradesies,
+      .projects .modalBox .modal-container .open-Space,
+      .projects .modalBox .modal-container .open-Freddit {
+        opacity: 1;
+        background-color: #fff;
+        width: 800px;
+        height: 500px;
+        padding: 10px 30px;
+        position: fixed;
+        left: calc(50% - 400px);
+        top: 12%;
+        border-radius: 4px;
+        z-index: 999;
+        pointer-events: auto;
+        cursor: auto;
+        visibility: visible;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6); }
+        @media (max-width: 400px) {
+          .projects .modalBox .modal-container .open-Tradesies,
+          .projects .modalBox .modal-container .open-Space,
+          .projects .modalBox .modal-container .open-Freddit {
+            left: 0; } }
 
 .lastSection {
   display: flex;
