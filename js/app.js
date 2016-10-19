@@ -72,32 +72,53 @@ const Freddit = {
   img2: '../img/freddit-comment.png'
 }
 
-projectsArr.push(Tradesies, SpaceRace, Freddit)
+// projectsArr.push(Tradesies, SpaceRace, Freddit)
+projectsArr.push(Tradesies)
 
 const projectHTMLarr = []
 
 projectsArr.forEach((project, index) => {
+  // const modalHTML = `
+  //   <div class="modal-container project">
+  //     <h3>${project.name}</h3>
+  //     <img src="${project.mainImg}" alt="${project.name} Page" class='modal-mainImg'>
+  //     <label class="modal-backdrop" id="backdrop-${project.className}"></label>
+  //     <div class="modal-content modal-size" id="open-${project.className}">
+  //       <label class="modal-close">&#x2715;</label>
+  //       <h2>${project.name}</h2><hr />
+  //       <p>${project.info}</p>
+  //       <img src='${project.mainImg}' class='modalPic'/>
+  //       <img src='${project.img2}' class='modalPic'/>
+  //       <label class="modal-content-btn thing">OK</label>
+  //     </div>
+  //   </div>
+  // `
   const modalHTML = `
-    <div class="modal-container project">
-      <h3>${project.name}</h3>
-      <img src="${project.mainImg}" alt="${project.name} Page" class='modal-mainImg'>
-      <label class="modal-backdrop" id="backdrop-${project.className}"></label>
-      <div class="modal-content modal-size" id="open-${project.className}">
-        <label class="modal-close">&#x2715;</label>
-        <h2>${project.name}</h2><hr />
-        <p>${project.info}</p>
-        <img src='${project.mainImg}' class='modalPic'/>
-        <img src='${project.img2}' class='modalPic'/>
-        <label class="modal-content-btn thing">OK</label>
-      </div>
+  <div class="modal-container project">
+    <h3 id="toggle-${project.className}"></h3>
+    <img src="${project.mainImg}" alt="${project.name} Page" class='modal-mainImg'>
+    <label class="modal-btn" for="toggle-${project.className}">${project.name}</label>
+    <label class="modal-backdrop" id="backdrop-${project.className}" for="toggle-${project.className}"></label>
+    <div class="modal-content" id="open-${project.className}">
+      <label class="modal-close" for="toggle-${project.className}">&#x2715;</label>
+      <h2>${project.name}</h2><hr />
+      <p>${project.info}</p>
+      <img src='${project.mainImg}' class='modalPic'/>
+      <img src='${project.img2}' class='modalPic'/>
+      <label class="modal-content-btn" for="toggle-${project.className}">OK</label>
     </div>
+  </div>
   `
   projectHTMLarr.push(modalHTML)
 })
 
 projectHTMLarr.forEach((projectHTML) => {
-  $('.modalBox').append(projectHTML)
+  // $('.modalBox').append(projectHTML)
 })
+
+// use this to build modalzzzz
+$('.test').featherlight('<h1>Hello</h1>')
+
 
 let projectToOpen,
     open,
@@ -105,11 +126,15 @@ let projectToOpen,
     backdrop,
     content
 $('.project').click(function() {
-  back = $(this)[0].childNodes[5].id
-  open = $(this)[0].childNodes[7].id
+  back = $(this)[0].childNodes[7].id
+  open = $(this)[0].childNodes[9].id
 
   backdrop = $(`#${back}`)
   content = $(`#${open}`)
+  // console.log("back", backdrop)
+  // console.log("content", content)
+  let thing = $(this).attr('for');
+  $('#' + thing).toggleClass('active');
   backdrop.removeClass('modal-backdrop').addClass(back)
   content.removeClass('modal-content').addClass(open)
 })
