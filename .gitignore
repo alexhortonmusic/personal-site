@@ -2,3 +2,4 @@ node_modules/
 .sass-cache
 css/output.css.map
 .bashrc
+lib/

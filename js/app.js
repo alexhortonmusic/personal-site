@@ -72,7 +72,8 @@ const Freddit = {
   img2: '../img/freddit-comment.png'
 }
 
-projectsArr.push(Tradesies, SpaceRace, Freddit)
+// projectsArr.push(Tradesies, SpaceRace, Freddit)
+projectsArr.push(Tradesies)
 
 const projectHTMLarr = []
 
@@ -112,8 +113,12 @@ projectsArr.forEach((project, index) => {
 })
 
 projectHTMLarr.forEach((projectHTML) => {
-  $('.modalBox').append(projectHTML)
+  // $('.modalBox').append(projectHTML)
 })
+
+// use this to build modalzzzz
+$('.test').featherlight('<h1>Hello</h1>')
+
 
 let projectToOpen,
     open,
