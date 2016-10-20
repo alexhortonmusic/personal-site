@@ -15,53 +15,68 @@
 body {
   font-family: 'Raleway', sans-serif; }
 
-.fullContainer {
-  width: 100%; }
-
 nav {
-  background-color: #3c6991; }
+  background-color: #A3A3A3;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; }
+  nav img {
+    height: 45px;
+    margin-bottom: 3px; }
+  nav div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px; }
+    nav div p {
+      margin: 0 10px;
+      align-self: flex-end; }
 
 .col {
-  margin-top: 0; }
+  margin: 0; }
+
+.column {
+  height: 700px; }
 
 .headline {
   display: block;
   height: 200px;
   margin: 0 auto; }
 
-.frontPageWrap .tagline {
-  color: #A3A3A3;
-  font-weight: lighter;
-  text-align: center;
-  font-size: 2.3em;
-  margin-top: 80px; }
-.frontPageWrap .tagInfo {
-  width: 70%;
-  display: block;
-  margin: 20px auto 0;
-  color: #FEFFEA;
-  text-align: center;
-  font-weight: lighter;
-  font-size: 1.2em;
-  line-height: 2; }
-.frontPageWrap .talkAboutIt {
-  font-style: italic;
-  text-decoration: none;
-  color: #FEFFEA;
-  font-size: 1.7em;
-  font-weight: lighter;
-  display: block;
-  width: 230px;
-  margin: 10px auto; }
-.frontPageWrap .talkAboutIt:active,
-.frontPageWrap .talkAboutIt:hover {
-  color: #3c6991;
-  transition: 0.2s; }
-
-.down {
-  font-size: 5em;
-  color: #FEFFEA;
-  text-align: center; }
+.frontPageWrap {
+  width: 100%; }
+  .frontPageWrap .heroTextBox {
+    height: 600px; }
+  .frontPageWrap .tagline {
+    color: #A3A3A3;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2.3em;
+    margin-top: 80px; }
+  .frontPageWrap .tagInfo {
+    width: 70%;
+    display: block;
+    margin: 20px auto 0;
+    color: #A3A3A3;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.2em;
+    line-height: 2; }
+  .frontPageWrap .talkAboutIt {
+    font-style: italic;
+    text-decoration: none;
+    color: #A3A3A3;
+    font-size: 1.7em;
+    font-weight: lighter;
+    display: block;
+    width: 270px;
+    margin: 10px auto; }
+  .frontPageWrap .talkAboutIt:active span,
+  .frontPageWrap .talkAboutIt:hover span {
+    color: #3c6991;
+    transition: 0.2s; }
 
 .headShotBox {
   margin-top: 30px;
@@ -76,21 +91,25 @@ nav {
     margin: 0 auto; }
 
 .about {
-  background-color: #FEFFEA;
-  width: 90%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/door2.jpg");
+  background-size: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; }
-  .about .aboutCol {
-    width: 30%; }
-    .about .aboutCol h3 {
+  justify-content: space-around;
+  color: #FEFFEA; }
+  .about .aboutRow {
+    width: 75%;
+    margin: 0 auto; }
+    .about .aboutRow h3 {
       text-align: center;
       font-size: 1.5rem; }
-    .about .aboutCol p {
+    .about .aboutRow p {
       text-align: center;
       line-height: 20px;
-      margin-top: 10px; }
-    .about .aboutCol #pingPong {
+      margin-top: 10px;
+      font-size: 1.1rem; }
+    .about .aboutRow #pingPong {
       margin-top: 30px;
       font-size: 3rem; }
 
@@ -200,39 +219,39 @@ nav {
   margin: 15px 20px;
   width: 500px; }
 
-.lastSection {
+.lastSection .techAndQuote {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-around; }
-  .lastSection .tech {
+  .lastSection .techAndQuote .tech {
     /* come back to this style */
     width: 75%; }
-    .lastSection .tech h1 {
+    .lastSection .techAndQuote .tech h1 {
       text-align: center;
       margin-top: 40px;
       margin-bottom: 25px; }
-    .lastSection .tech .techBox .row {
+    .lastSection .techAndQuote .tech .techBox .row {
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
-      .lastSection .tech .techBox .row .techImgBox {
+      .lastSection .techAndQuote .tech .techBox .row .techImgBox {
         width: 100px;
         margin-bottom: 50px; }
-        .lastSection .tech .techBox .row .techImgBox .techImg {
+        .lastSection .techAndQuote .tech .techBox .row .techImgBox .techImg {
           display: block;
           max-height: 60px;
           max-width: 90px;
           margin: 0 auto; }
-  .lastSection .sondheim {
+  .lastSection .techAndQuote .sondheim {
     background-color: #3c6991; }
-    .lastSection .sondheim .quote {
+    .lastSection .techAndQuote .sondheim .quote {
       font-family: 'Patua One', cursive;
       border-top: 3px double #FEFFEA;
       border-bottom: 3px double #FEFFEA;
       width: 90%;
       margin: 140px auto 0;
       text-align: center; }
-      .lastSection .sondheim .quote h1 {
+      .lastSection .techAndQuote .sondheim .quote h1 {
         padding: 10px 0;
         position: relative;
         width: 80%;
@@ -242,14 +261,14 @@ nav {
         color: #FEFFEA;
         font-style: italic;
         font-weight: lighter; }
-      .lastSection .sondheim .quote h1:before {
+      .lastSection .techAndQuote .sondheim .quote h1:before {
         content: "\201C";
         font-size: 200%;
         display: block;
         position: absolute;
         top: -5px;
         left: -5px; }
-      .lastSection .sondheim .quote p {
+      .lastSection .techAndQuote .sondheim .quote p {
         margin-bottom: 10px;
         color: #FEFFEA;
         font-family: 'Raleway', serif;
