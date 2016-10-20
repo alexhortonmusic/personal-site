@@ -1,4 +1,13 @@
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -6,56 +15,68 @@
 body {
   font-family: 'Raleway', sans-serif; }
 
-.fullContainer {
-  width: 100%; }
+nav {
+  background-color: #A3A3A3;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; }
+  nav img {
+    height: 45px;
+    margin-bottom: 3px; }
+  nav div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px; }
+    nav div p {
+      margin: 0 10px;
+      align-self: flex-end; }
 
-#heroImg {
-  width: 100%;
-  height: 820px;
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../../img/tape-mirror-mirror.jpeg");
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed; }
+.col {
+  margin: 0; }
+
+.column {
+  height: 700px; }
 
 .headline {
   display: block;
   height: 200px;
   margin: 0 auto; }
 
-.frontPageWrap .tagline {
-  color: #FEFFEA;
-  font-weight: lighter;
-  text-align: center;
-  font-size: 2.3em;
-  margin-top: 80px; }
-.frontPageWrap .tagInfo {
-  width: 70%;
-  display: block;
-  margin: 20px auto 0;
-  color: #FEFFEA;
-  text-align: center;
-  font-weight: lighter;
-  font-size: 1.2em;
-  line-height: 2; }
-.frontPageWrap .talkAboutIt {
-  font-style: italic;
-  text-decoration: none;
-  color: #FEFFEA;
-  font-size: 1.7em;
-  font-weight: lighter;
-  display: block;
-  width: 230px;
-  margin: 10px auto; }
-.frontPageWrap .talkAboutIt:active,
-.frontPageWrap .talkAboutIt:hover {
-  color: #4d6c19;
-  transition: 0.2s; }
-
-.down {
-  font-size: 5em;
-  color: #FEFFEA;
-  text-align: center;
-  margin-top: 20px; }
+.frontPageWrap {
+  width: 100%; }
+  .frontPageWrap .heroTextBox {
+    height: 600px; }
+  .frontPageWrap .tagline {
+    color: #A3A3A3;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2.3em;
+    margin-top: 80px; }
+  .frontPageWrap .tagInfo {
+    width: 70%;
+    display: block;
+    margin: 20px auto 0;
+    color: #A3A3A3;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.2em;
+    line-height: 2; }
+  .frontPageWrap .talkAboutIt {
+    font-style: italic;
+    text-decoration: none;
+    color: #A3A3A3;
+    font-size: 1.7em;
+    font-weight: lighter;
+    display: block;
+    width: 270px;
+    margin: 10px auto; }
+  .frontPageWrap .talkAboutIt:active span,
+  .frontPageWrap .talkAboutIt:hover span {
+    color: #3c6991;
+    transition: 0.2s; }
 
 .headShotBox {
   margin-top: 30px;
@@ -69,187 +90,168 @@ body {
     -moz-border-radius: 150px;
     margin: 0 auto; }
 
-.about .aboutBox {
-  width: 90%;
-  margin: 30px auto;
+.about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/door2.jpg");
+  background-size: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-  .about .aboutBox .aboutCol {
-    width: 30%; }
-    .about .aboutBox .aboutCol h3 {
+  flex-direction: column;
+  justify-content: space-around;
+  color: #FEFFEA; }
+  .about .aboutRow {
+    width: 75%;
+    margin: 0 auto; }
+    .about .aboutRow h3 {
       text-align: center;
       font-size: 1.5rem; }
-    .about .aboutBox .aboutCol p {
+    .about .aboutRow p {
       text-align: center;
       line-height: 20px;
-      margin-top: 10px; }
-    .about .aboutBox .aboutCol #pingPong {
+      margin-top: 10px;
+      font-size: 1.1rem; }
+    .about .aboutRow #pingPong {
       margin-top: 30px;
       font-size: 3rem; }
 
+.rows {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  clear: both; }
+  .rows img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: 1px solid black; }
+
 .projects {
-  border: 1px solid #4d6c19;
-  min-height: 500px; }
-  .projects .modalBox {
+  max-height: 850px; }
+  .projects h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FEFFEA;
+    font-weight: lighter;
+    font-size: 2.3rem; }
+
+.gallery {
+  padding: 40px 0 300px;
+  position: relative;
+  overflow: hidden; }
+  .gallery .galleryUl {
+    position: relative;
+    list-style-type: none;
     display: flex;
-    flex-direction: row;
     flex-flow: row wrap;
     justify-content: space-around; }
-    .projects .modalBox .modal-container {
-      margin: 30px;
-      border: 2px solid red;
-      width: 500px; }
-      .projects .modalBox .modal-container .modal-mainImg {
-        width: 100%; }
-      .projects .modalBox .modal-container .modal-content,
-      .projects .modalBox .modal-container .modal-backdrop {
-        height: 0;
-        width: 0;
-        opacity: 0;
-        visibility: hidden;
-        overflow: hidden;
+    .gallery .galleryUl .modal {
+      margin: 30px 30px 50px;
+      width: 40%;
+      min-width: 450px;
+      position: relative; }
+      .gallery .galleryUl .modal h2 {
+        text-align: center;
+        color: #FEFFEA;
+        font-weight: lighter;
+        font-size: 2.1rem;
+        margin-bottom: 10px; }
+      .gallery .galleryUl .modal div {
         cursor: pointer;
-        transition: opacity 0.2s ease-in; }
-      .projects .modalBox .modal-container .modal-size {
-        width: 400px; }
-      .projects .modalBox .modal-container .modalPic {
-        width: 300px;
+        display: block;
+        position: relative;
+        width: 100%;
         height: auto;
-        display: block; }
-      .projects .modalBox .modal-container .modal-close {
-        color: #aaa;
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        padding-top: 3px;
-        background: #fff;
-        font-size: 16px;
-        width: 25px;
-        height: 25px;
-        font-weight: bold;
-        text-align: center;
-        cursor: pointer; }
-        .projects .modalBox .modal-container .modal-close:hover {
-          color: #333; }
-      .projects .modalBox .modal-container .modal-content-btn {
-        position: absolute;
-        text-align: center;
-        cursor: pointer;
-        bottom: 20px;
-        right: 30px;
-        background: #446CB3;
-        color: #fff;
-        width: 50px;
-        border-radius: 2px;
-        font-size: 14px;
-        height: 32px;
-        padding-top: 9px;
-        font-weight: normal; }
-        .projects .modalBox .modal-container .modal-content-btn:hover {
-          color: #fff;
-          background: #365690; }
-      .projects .modalBox .modal-container .backdrop-Tradesies,
-      .projects .modalBox .modal-container .backdrop-Space,
-      .projects .modalBox .modal-container .backdrop-Freddit {
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 9;
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 0.2s ease-in; }
-      .projects .modalBox .modal-container .open-Tradesies,
-      .projects .modalBox .modal-container .open-Space,
-      .projects .modalBox .modal-container .open-Freddit {
-        opacity: 1;
-        background-color: #fff;
-        width: 800px;
-        height: 500px;
-        padding: 10px 30px;
-        position: fixed;
-        left: calc(50% - 400px);
-        top: 12%;
-        border-radius: 4px;
-        z-index: 999;
-        pointer-events: auto;
-        cursor: auto;
-        visibility: visible;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6); }
-        @media (max-width: 400px) {
-          .projects .modalBox .modal-container .open-Tradesies,
-          .projects .modalBox .modal-container .open-Space,
-          .projects .modalBox .modal-container .open-Freddit {
-            left: 0; } }
-      .projects .modalBox .modal-container #toggle-tradesies, .projects .modalBox .modal-container #toggle-spaceRace, .projects .modalBox .modal-container #toggle-freddit {
-        display: none; }
-        .projects .modalBox .modal-container #toggle-tradesies.active ~ .modal-backdrop, .projects .modalBox .modal-container #toggle-tradesies:checked ~ .modal-backdrop, .projects .modalBox .modal-container #toggle-spaceRace.active ~ .modal-backdrop, .projects .modalBox .modal-container #toggle-spaceRace:checked ~ .modal-backdrop, .projects .modalBox .modal-container #toggle-freddit.active ~ .modal-backdrop, .projects .modalBox .modal-container #toggle-freddit:checked ~ .modal-backdrop {
-          background-color: rgba(0, 0, 0, 0.6);
-          width: 100vw;
-          height: 100vh;
-          position: fixed;
-          left: 0;
+        margin: 0;
+        padding: 0;
+        line-height: 0; }
+        .gallery .galleryUl .modal div:before {
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          top: 40%;
+          left: 50%;
+          margin: -14px 0 0 -16px;
+          background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Asodipodi%3D%22http%3A//sodipodi.sourceforge.net/DTD/sodipodi-0.dtd%22%20xmlns%3Ainkscape%3D%22http%3A//www.inkscape.org/namespaces/inkscape%22%20inkscape%3Aversion%3D%220.48.4%20r9939%22%20sodipodi%3Adocname%3D%22icon-fullscreen.svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20960%20560%22%0A%09%20enable-background%3D%22new%200%200%20960%20560%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Csodipodi%3Anamedview%20%20borderopacity%3D%221%22%20pagecolor%3D%22%23ffffff%22%20bordercolor%3D%22%23666666%22%20objecttolerance%3D%2210%22%20gridtolerance%3D%2210%22%20guidetolerance%3D%2210%22%20showgrid%3D%22false%22%20fit-margin-top%3D%220%22%20fit-margin-left%3D%220%22%20inkscape%3Azoom%3D%227.375%22%20inkscape%3Acx%3D%22-5.1525424%22%20inkscape%3Acy%3D%2216%22%20id%3D%22namedview11%22%20inkscape%3Awindow-x%3D%22-8%22%20inkscape%3Awindow-y%3D%22-8%22%20fit-margin-right%3D%220%22%20inkscape%3Apageopacity%3D%220%22%20fit-margin-bottom%3D%220%22%20inkscape%3Awindow-width%3D%221366%22%20inkscape%3Awindow-height%3D%22706%22%20inkscape%3Awindow-maximized%3D%221%22%20inkscape%3Apageshadow%3D%222%22%20inkscape%3Acurrent-layer%3D%22svg2%22%3E%0A%09%3C/sodipodi%3Anamedview%3E%0A%3Cg%3E%0A%09%3Crect%20x%3D%22220%22%20y%3D%22260%22%20fill%3D%22%23FFFFFF%22%20width%3D%22536%22%20height%3D%2224%22/%3E%0A%3C/g%3E%0A%3Cg%3E%0A%09%3Crect%20x%3D%22476%22%20y%3D%224%22%20fill%3D%22%23FFFFFF%22%20width%3D%2224%22%20height%3D%22556%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A) no-repeat;
+          content: '';
+          opacity: 0;
+          z-index: 1;
+          transition: all 0.3s linear; }
+        .gallery .galleryUl .modal div:hover:before {
+          top: 50%;
+          opacity: 1; }
+        .gallery .galleryUl .modal div:after {
+          position: absolute;
+          width: 100%;
           top: 0;
-          z-index: 9;
-          visibility: visible;
-          opacity: 1;
-          transition: opacity 0.2s ease-in; }
-        .projects .modalBox .modal-container #toggle-tradesies.active ~ .modal-content, .projects .modalBox .modal-container #toggle-tradesies:checked ~ .modal-content, .projects .modalBox .modal-container #toggle-spaceRace.active ~ .modal-content, .projects .modalBox .modal-container #toggle-spaceRace:checked ~ .modal-content, .projects .modalBox .modal-container #toggle-freddit.active ~ .modal-content, .projects .modalBox .modal-container #toggle-freddit:checked ~ .modal-content {
-          opacity: 1;
-          background-color: #fff;
-          max-width: 400px;
-          width: 400px;
-          height: 280px;
-          padding: 10px 30px;
-          position: fixed;
-          left: calc(50% - 200px);
-          top: 12%;
-          border-radius: 4px;
-          z-index: 999;
-          pointer-events: auto;
-          cursor: auto;
-          visibility: visible;
-          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6); }
-          @media (max-width: 400px) {
-            .projects .modalBox .modal-container #toggle-tradesies.active ~ .modal-content, .projects .modalBox .modal-container #toggle-tradesies:checked ~ .modal-content, .projects .modalBox .modal-container #toggle-spaceRace.active ~ .modal-content, .projects .modalBox .modal-container #toggle-spaceRace:checked ~ .modal-content, .projects .modalBox .modal-container #toggle-freddit.active ~ .modal-content, .projects .modalBox .modal-container #toggle-freddit:checked ~ .modal-content {
-              left: 0; } }
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.3);
+          content: '';
+          opacity: 0;
+          transition: all 0.3s linear; }
+        .gallery .galleryUl .modal div:hover:after {
+          opacity: 1; }
 
-.lastSection {
+.featherlight-content {
+  max-height: 600px;
+  max-width: 600px;
+  background-color: #FEFFEA; }
+
+.modalPop h2 {
+  text-align: center; }
+.modalPop p {
+  width: 80%;
+  margin: 5px auto;
+  text-align: center; }
+.modalPop .links a {
+  display: inline-block;
+  width: 49%;
+  margin: 10px auto 0;
+  color: #3c6991;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none; }
+.modalPop .links a:hover {
+  color: #A3A3A3;
+  transition: 0.2s; }
+.modalPop img {
+  display: block;
+  margin: 15px 20px;
+  width: 500px; }
+
+.lastSection .techAndQuote {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-around; }
-  .lastSection .tech {
+  .lastSection .techAndQuote .tech {
     /* come back to this style */
     width: 75%; }
-    .lastSection .tech h1 {
+    .lastSection .techAndQuote .tech h1 {
       text-align: center;
       margin-top: 40px;
       margin-bottom: 25px; }
-    .lastSection .tech .techBox .row {
+    .lastSection .techAndQuote .tech .techBox .row {
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
-      .lastSection .tech .techBox .row .techImgBox {
+      .lastSection .techAndQuote .tech .techBox .row .techImgBox {
         width: 100px;
         margin-bottom: 50px; }
-        .lastSection .tech .techBox .row .techImgBox .techImg {
+        .lastSection .techAndQuote .tech .techBox .row .techImgBox .techImg {
           display: block;
           max-height: 60px;
           max-width: 90px;
           margin: 0 auto; }
-  .lastSection .sondheim {
-    background-color: #4d6c19; }
-    .lastSection .sondheim .quote {
+  .lastSection .techAndQuote .sondheim {
+    background-color: #3c6991; }
+    .lastSection .techAndQuote .sondheim .quote {
       font-family: 'Patua One', cursive;
       border-top: 3px double #FEFFEA;
       border-bottom: 3px double #FEFFEA;
       width: 90%;
       margin: 140px auto 0;
       text-align: center; }
-      .lastSection .sondheim .quote h1 {
+      .lastSection .techAndQuote .sondheim .quote h1 {
         padding: 10px 0;
         position: relative;
         width: 80%;
@@ -259,14 +261,14 @@ body {
         color: #FEFFEA;
         font-style: italic;
         font-weight: lighter; }
-      .lastSection .sondheim .quote h1:before {
+      .lastSection .techAndQuote .sondheim .quote h1:before {
         content: "\201C";
         font-size: 200%;
         display: block;
         position: absolute;
         top: -5px;
         left: -5px; }
-      .lastSection .sondheim .quote p {
+      .lastSection .techAndQuote .sondheim .quote p {
         margin-bottom: 10px;
         color: #FEFFEA;
         font-family: 'Raleway', serif;
