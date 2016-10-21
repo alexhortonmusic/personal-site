@@ -1,4 +1,8 @@
+/* RGB */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -7,17 +11,12 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
 body {
   font-family: 'Raleway', sans-serif; }
 
 nav {
-  background-color: #A3A3A3;
-  height: 60px;
+  background-color: #a4c3b2;
+  height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,9 +28,9 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 10px; }
+    margin-right: 60px; }
     nav div p {
-      margin: 0 10px;
+      margin: 0 20px;
       align-self: flex-end; }
 
 .col {
@@ -50,16 +49,16 @@ nav {
   .frontPageWrap .heroTextBox {
     height: 600px; }
   .frontPageWrap .tagline {
-    color: #A3A3A3;
+    color: #a4c3b2;
     font-weight: lighter;
     text-align: center;
     font-size: 2.3em;
-    margin-top: 80px; }
+    margin-top: 40px; }
   .frontPageWrap .tagInfo {
     width: 70%;
     display: block;
     margin: 20px auto 0;
-    color: #A3A3A3;
+    color: #a4c3b2;
     text-align: center;
     font-weight: lighter;
     font-size: 1.2em;
@@ -67,7 +66,7 @@ nav {
   .frontPageWrap .talkAboutIt {
     font-style: italic;
     text-decoration: none;
-    color: #A3A3A3;
+    color: #a4c3b2;
     font-size: 1.7em;
     font-weight: lighter;
     display: block;
@@ -92,12 +91,13 @@ nav {
 
 .about {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/door2.jpg");
-  background-size: 100%;
+  background-size: cover;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: #FEFFEA; }
+  color: #eaf4f4; }
   .about .aboutRow {
     width: 75%;
     margin: 0 auto; }
@@ -127,11 +127,14 @@ nav {
     border: 1px solid black; }
 
 .projects {
+  background-image: url("../img/hammer.jpg");
+  background-size: cover;
+  border-top: 2px solid black;
   max-height: 850px; }
   .projects h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #FEFFEA;
+    color: #3c6991;
     font-weight: lighter;
     font-size: 2.3rem; }
 
@@ -146,13 +149,13 @@ nav {
     flex-flow: row wrap;
     justify-content: space-around; }
     .gallery .galleryUl .modal {
-      margin: 30px 30px 50px;
+      margin: 10px 30px 40px;
       width: 40%;
       min-width: 450px;
       position: relative; }
       .gallery .galleryUl .modal h2 {
         text-align: center;
-        color: #FEFFEA;
+        color: #3c6991;
         font-weight: lighter;
         font-size: 2.1rem;
         margin-bottom: 10px; }
@@ -195,7 +198,7 @@ nav {
 .featherlight-content {
   max-height: 600px;
   max-width: 600px;
-  background-color: #FEFFEA; }
+  background-color: #eaf4f4; }
 
 .modalPop h2 {
   text-align: center; }
@@ -212,66 +215,68 @@ nav {
   text-align: center;
   text-decoration: none; }
 .modalPop .links a:hover {
-  color: #A3A3A3;
+  color: #a4c3b2;
   transition: 0.2s; }
 .modalPop img {
   display: block;
   margin: 15px 20px;
   width: 500px; }
 
-.lastSection .techAndQuote {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-  .lastSection .techAndQuote .tech {
-    /* come back to this style */
-    width: 75%; }
-    .lastSection .techAndQuote .tech h1 {
-      text-align: center;
-      margin-top: 40px;
-      margin-bottom: 25px; }
-    .lastSection .techAndQuote .tech .techBox .row {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around; }
-      .lastSection .techAndQuote .tech .techBox .row .techImgBox {
-        width: 100px;
-        margin-bottom: 50px; }
-        .lastSection .techAndQuote .tech .techBox .row .techImgBox .techImg {
-          display: block;
-          max-height: 60px;
-          max-width: 90px;
-          margin: 0 auto; }
-  .lastSection .techAndQuote .sondheim {
-    background-color: #3c6991; }
-    .lastSection .techAndQuote .sondheim .quote {
-      font-family: 'Patua One', cursive;
-      border-top: 3px double #FEFFEA;
-      border-bottom: 3px double #FEFFEA;
-      width: 90%;
-      margin: 140px auto 0;
-      text-align: center; }
-      .lastSection .techAndQuote .sondheim .quote h1 {
-        padding: 10px 0;
-        position: relative;
-        width: 80%;
+.lastSection {
+  border-top: 2px solid black; }
+  .lastSection .techAndQuote {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .lastSection .techAndQuote .tech {
+      /* come back to this style */
+      width: 75%; }
+      .lastSection .techAndQuote .tech h1 {
         text-align: center;
-        margin: 0 auto;
-        font-size: 2.2em;
-        color: #FEFFEA;
-        font-style: italic;
-        font-weight: lighter; }
-      .lastSection .techAndQuote .sondheim .quote h1:before {
-        content: "\201C";
-        font-size: 200%;
-        display: block;
-        position: absolute;
-        top: -5px;
-        left: -5px; }
-      .lastSection .techAndQuote .sondheim .quote p {
-        margin-bottom: 10px;
-        color: #FEFFEA;
-        font-family: 'Raleway', serif;
-        font-weight: lighter; }
+        margin-top: 40px;
+        margin-bottom: 25px; }
+      .lastSection .techAndQuote .tech .techBox .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; }
+        .lastSection .techAndQuote .tech .techBox .row .techImgBox {
+          width: 100px;
+          margin-bottom: 50px; }
+          .lastSection .techAndQuote .tech .techBox .row .techImgBox .techImg {
+            display: block;
+            max-height: 60px;
+            max-width: 90px;
+            margin: 0 auto; }
+    .lastSection .techAndQuote .sondheim {
+      background-color: #3c6991; }
+      .lastSection .techAndQuote .sondheim .quote {
+        font-family: 'Patua One', cursive;
+        border-top: 3px double #eaf4f4;
+        border-bottom: 3px double #eaf4f4;
+        width: 90%;
+        margin: 140px auto 0;
+        text-align: center; }
+        .lastSection .techAndQuote .sondheim .quote h1 {
+          padding: 10px 0;
+          position: relative;
+          width: 80%;
+          text-align: center;
+          margin: 0 auto;
+          font-size: 2.2em;
+          color: #eaf4f4;
+          font-style: italic;
+          font-weight: lighter; }
+        .lastSection .techAndQuote .sondheim .quote h1:before {
+          content: "\201C";
+          font-size: 200%;
+          display: block;
+          position: absolute;
+          top: -5px;
+          left: -5px; }
+        .lastSection .techAndQuote .sondheim .quote p {
+          margin-bottom: 10px;
+          color: #eaf4f4;
+          font-family: 'Raleway', serif;
+          font-weight: lighter; }
 
 /*# sourceMappingURL=output.css.map */
