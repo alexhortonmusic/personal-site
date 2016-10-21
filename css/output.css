@@ -15,8 +15,8 @@ body {
   font-family: 'Raleway', sans-serif; }
 
 nav {
-  background-color: #a4c3b2;
-  height: 70px;
+  height: 50px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,7 +31,8 @@ nav {
     margin-right: 60px; }
     nav div p {
       margin: 0 20px;
-      align-self: flex-end; }
+      align-self: flex-end;
+      font-size: 1.4rem; }
 
 .col {
   margin: 0; }
@@ -44,41 +45,51 @@ nav {
   height: 200px;
   margin: 0 auto; }
 
-.frontPageWrap {
-  width: 100%; }
-  .frontPageWrap .heroTextBox {
-    height: 600px; }
-  .frontPageWrap .tagline {
-    color: #a4c3b2;
-    font-weight: lighter;
-    text-align: center;
-    font-size: 2.3em;
-    margin-top: 40px; }
-  .frontPageWrap .tagInfo {
-    width: 70%;
-    display: block;
-    margin: 20px auto 0;
-    color: #a4c3b2;
-    text-align: center;
-    font-weight: lighter;
-    font-size: 1.2em;
-    line-height: 2; }
-  .frontPageWrap .talkAboutIt {
-    font-style: italic;
-    text-decoration: none;
-    color: #a4c3b2;
-    font-size: 1.7em;
-    font-weight: lighter;
-    display: block;
-    width: 270px;
-    margin: 10px auto; }
-  .frontPageWrap .talkAboutIt:active span,
-  .frontPageWrap .talkAboutIt:hover span {
-    color: #3c6991;
-    transition: 0.2s; }
+.heroTextBox {
+  height: 700px;
+  background-image: url("../img/work-harder.jpeg");
+  background-position: top;
+  background-size: 115%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-bottom: 2px solid white; }
+  .heroTextBox .heroTextWrap {
+    margin-top: 90px;
+    width: 40%;
+    position: left; }
+    .heroTextBox .heroTextWrap .tagline {
+      color: #eaf4f4;
+      font-weight: lighter;
+      text-align: center;
+      font-size: 2.3em;
+      margin-top: 40px; }
+    .heroTextBox .heroTextWrap .tagInfo {
+      width: 70%;
+      display: block;
+      margin: 20px auto 0;
+      color: #a4c3b2;
+      text-align: center;
+      font-weight: lighter;
+      font-size: 1.2em;
+      line-height: 2; }
+    .heroTextBox .heroTextWrap .talkAboutIt {
+      font-style: italic;
+      text-decoration: none;
+      color: #eaf4f4;
+      font-size: 1.7em;
+      font-weight: lighter;
+      display: block;
+      width: 270px;
+      margin: 10px auto; }
+    .heroTextBox .heroTextWrap .talkAboutIt:active,
+    .heroTextBox .heroTextWrap .talkAboutIt:hover {
+      color: #eaf4f4;
+      text-shadow: 2px 2px 8px #fefefd;
+      transition: 0.2s; }
 
 .headShotBox {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
   text-align: center; }
   .headShotBox img {
@@ -90,26 +101,24 @@ nav {
     margin: 0 auto; }
 
 .about {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/door2.jpg");
-  background-size: cover;
-  height: 100%;
-  width: 100%;
+  width: 90%;
+  margin: 20px auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   color: #eaf4f4; }
-  .about .aboutRow {
-    width: 75%;
+  .about .aboutCol {
+    width: 30%;
     margin: 0 auto; }
-    .about .aboutRow h3 {
+    .about .aboutCol h3 {
       text-align: center;
       font-size: 1.5rem; }
-    .about .aboutRow p {
+    .about .aboutCol p {
       text-align: center;
       line-height: 20px;
       margin-top: 10px;
       font-size: 1.1rem; }
-    .about .aboutRow #pingPong {
+    .about .aboutCol #pingPong {
       margin-top: 30px;
       font-size: 3rem; }
 

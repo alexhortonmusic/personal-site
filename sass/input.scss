@@ -34,8 +34,8 @@ body {
 }
 
 nav {
-	background-color: $neutral-3;
-	height: 70px;
+	height: 50px;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -55,6 +55,7 @@ nav {
 		p {
 			margin: 0 20px;
 			align-self: flex-end;
+			font-size: 1.4rem;
 		}
 	}
 }
@@ -74,57 +75,63 @@ nav {
   margin: 0 auto;
 }
 
-.frontPageWrap {
-	width: 100%;
+.heroTextBox {
+	height: 700px;
+	background-image: url('../img/work-harder.jpeg');
+	background-position: top;
+	background-size: 115%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	border-bottom: 2px solid white;
 
-	.heroTextBox {
-		height: 600px;
-	}
-
-  .tagline {
-    color: $neutral-3;
-    font-weight: lighter;
-    text-align: center;
-    font-size: 2.3em;
-    margin-top: 40px;
-  }
-
-  .tagInfo {
-    width: 70%;
-    display: block;
-    margin: 20px auto 0;
-    color: $neutral-3;
-    text-align: center;
-    font-weight: lighter;
-    font-size: 1.2em;
-    line-height: 2;
-
-  }
-
-  .talkAboutIt {
-    font-style: italic;
-    text-decoration: none;
-    color: $neutral-3;
-    font-size: 1.7em;
-    font-weight: lighter;
-    display: block;
-    width: 270px;
-    margin: 10px auto;
-  }
-
-  .talkAboutIt:active,
-  .talkAboutIt:hover {
-
-		span {
-			color: $primary;
-      transition: 0.2s;
+	.heroTextWrap {
+		margin-top: 90px;
+		width: 40%;
+		position: left;
+		.tagline {
+			color: $neutral-1;
+			font-weight: lighter;
+			text-align: center;
+			font-size: 2.3em;
+			margin-top: 40px;
 		}
-  }
+
+		.tagInfo {
+			width: 70%;
+			display: block;
+			margin: 20px auto 0;
+			color: $neutral-3;
+			text-align: center;
+			font-weight: lighter;
+			font-size: 1.2em;
+			line-height: 2;
+
+		}
+
+		.talkAboutIt {
+			font-style: italic;
+			text-decoration: none;
+			color: $neutral-1;
+			font-size: 1.7em;
+			font-weight: lighter;
+			display: block;
+			width: 270px;
+			margin: 10px auto;
+		}
+
+		.talkAboutIt:active,
+		.talkAboutIt:hover {
+			color: $neutral-1;
+			text-shadow: 2px 2px 8px #fefefd;
+			transition: 0.2s;
+		}
+
+	}
 }
 
-
 .headShotBox {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
 
@@ -141,17 +148,18 @@ nav {
 
 // about
 .about {
-	background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('../img/door2.jpg');
-	background-size: cover;
-	height: 100%;
-	width: 100%;
+	// background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('../img/door2.jpg');
+	// background-size: cover;
+	// height: 100%;
+	width: 90%;
+	margin: 20px auto;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-around;
 	color: $neutral-1;
 
-	.aboutRow {
-	  width: 75%;
+	.aboutCol {
+	  width: 30%;
 		margin: 0 auto;
 
 	  h3 {
