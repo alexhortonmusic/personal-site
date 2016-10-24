@@ -39,6 +39,7 @@ body {
         border-radius: 150px;
         -webkit-border-radius: 150px;
         -moz-border-radius: 150px;
+        box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.75);
         margin: 0 auto; }
     .heroTextBox .heroTextWrap .talkAboutIt {
       font-style: italic;
@@ -196,27 +197,67 @@ nav {
   border: 1px solid #3c6991; }
 
 .about {
-  height: 800px;
   width: 90%;
   margin: 20px auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   color: #3c6991; }
-  .about .aboutCol {
-    width: 30%;
-    margin: 0 auto; }
-    .about .aboutCol h3 {
-      text-align: center;
-      font-size: 1.5rem; }
-    .about .aboutCol p {
-      text-align: center;
-      line-height: 20px;
-      margin-top: 10px;
-      font-size: 1.1rem; }
-    .about .aboutCol #pingPong {
+  .about .whoIAm h1 {
+    text-align: center;
+    font-weight: 400; }
+  .about .whoIAm .aboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 60px; }
+    .about .whoIAm .aboutMe .aboutImg img {
+      height: 300px;
+      width: auto;
+      border-radius: 150px;
+      -webkit-border-radius: 150px;
+      -moz-border-radius: 150px;
+      box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.75); }
+    .about .whoIAm .aboutMe .tagInfo {
+      width: 40%;
       margin-top: 30px;
-      font-size: 3rem; }
+      display: block;
+      color: #3c6991;
+      text-align: center;
+      font-weight: lighter;
+      font-size: 1.2em;
+      line-height: 2; }
+      .about .whoIAm .aboutMe .tagInfo span {
+        color: #8cb369;
+        font-size: 1.5rem;
+        font-style: italic; }
+  .about .whatIDo {
+    margin-top: 120px;
+    margin-bottom: 30px; }
+    .about .whatIDo h1 {
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 70px; }
+    .about .whatIDo .aboutCols {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      .about .whatIDo .aboutCols .aboutCol {
+        width: 30%;
+        margin: 0 auto; }
+        .about .whatIDo .aboutCols .aboutCol h3 {
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: lighter;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #3c6991; }
+        .about .whatIDo .aboutCols .aboutCol p {
+          text-align: center;
+          line-height: 20px;
+          margin-top: 30px;
+          font-size: 1.1rem; }
+        .about .whatIDo .aboutCols .aboutCol #pingPong {
+          margin-top: 50px;
+          font-size: 3rem; }
 
 .lastSection {
   border-top: 2px solid black; }
