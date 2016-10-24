@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.1.1",
-    "featherlight": "^1.5.0"
+    "featherlight": "^1.5.0",
+    "jquery": "^3.1.1"
   }
 }

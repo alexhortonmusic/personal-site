@@ -1,0 +1,32 @@
+// about
+.about {
+	height: 800px;
+	width: 90%;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	color: $primary;
+
+	.aboutCol {
+	  width: 30%;
+		margin: 0 auto;
+
+	  h3 {
+	    text-align: center;
+	    font-size: 1.5rem;
+	  }
+
+	  p {
+	    text-align: center;
+	    line-height: 20px;
+	    margin-top: 10px;
+			font-size: 1.1rem;
+	  }
+
+	  #pingPong {
+	    margin-top: 30px;
+	    font-size: 3rem;
+	  }
+  }
+}
