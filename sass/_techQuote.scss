@@ -1,11 +1,11 @@
 // tech and quote
 .lastSection {
 	border-top: 2px solid black;
+	border-bottom: 2px solid black;
 	.techAndQuote {
 		display: flex;
 		flex-direction:row;
 		justify-content: space-around;
-		// border-top: 2px solid $neutral-1;
 
 		.tech { /* come back to this style */
 			width: 75%;
@@ -21,10 +21,11 @@
 				.row {
 					display: flex;
 					flex-direction: row;
+					flex-wrap: wrap;
 					justify-content: space-around;
 
 					.techImgBox {
-						width: 100px;
+						width: 15%;
 						margin-bottom: 50px;
 
 						.techImg {

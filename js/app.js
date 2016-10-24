@@ -30,13 +30,15 @@ const buildPrint = (element, index) => {
       <img src='${element}' class='techImg' />
     </div>
   `
-  if (index <= 6) {
-    $('.row1').append(techImg)
-  } else if (index <= 13) {
-    $('.row2').append(techImg)
-  } else {
-    $('.row3').append(techImg)
-  }
+
+  $('.row').append(techImg)
+  // if (index <= 6) {
+  //   $('.row1').append(techImg)
+  // } else if (index <= 13) {
+  //   $('.row2').append(techImg)
+  // } else {
+  //   $('.row3').append(techImg)
+  // }
 }
 
 const printStack = () => {

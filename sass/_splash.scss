@@ -3,7 +3,7 @@
 	background-image: url('../img/hammer.jpg');
 	background-position: top;
 	background-size: cover;
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid black;
 
 	.heroTextWrap {
 		margin: 40px auto;
@@ -50,7 +50,7 @@
 		.talkAboutIt:hover {
 			color: $secondary;
 			// text-shadow: 2px 2px 8px $primary;
-			letter-spacing: 5px;
+			letter-spacing: 4px;
 			transition: 0.2s;
 		}
 	}
