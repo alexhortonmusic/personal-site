@@ -47,12 +47,15 @@ body {
       font-size: 1.7em;
       font-weight: lighter;
       display: block;
-      width: 270px;
-      margin: 10px auto; }
+      width: 370px;
+      margin: 10px auto;
+      text-align: center;
+      letter-spacing: 0;
+      transition: 0.2s; }
     .heroTextBox .heroTextWrap .talkAboutIt:active,
     .heroTextBox .heroTextWrap .talkAboutIt:hover {
-      color: #3c6991;
-      text-shadow: 2px 2px 8px #3c6991;
+      color: #8cb369;
+      letter-spacing: 5px;
       transition: 0.2s; }
 
 nav {
@@ -67,11 +70,21 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     margin-right: 60px; }
-    nav div a {
-      text-decoration: none; }
-      nav div a p {
+    nav div a:link,
+    nav div a:visited {
+      text-decoration: none;
+      color: #3c6991;
+      letter-spacing: 0;
+      transition: 0.2s; }
+      nav div a:link p,
+      nav div a:visited p {
         margin: 0 20px;
         font-size: 1.4rem; }
+    nav div a:active,
+    nav div a:hover {
+      color: #8cb369;
+      letter-spacing: 2px;
+      transition: 0.2s; }
 
 .projects {
   background-image: url("../img/rocks.jpg");
